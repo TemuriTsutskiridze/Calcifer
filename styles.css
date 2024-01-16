@@ -6,14 +6,40 @@
 
 body{
     display: flex;
-    justify-content: space-between;
-    padding: 20px 100px;
-    background-color: aquamarine;
+    justify-content: center;
 }
 
-/* თიკო, ამ ნაწილამდე შეგიძლია შეცვალო მთავარი გვერდის სტილების მიხდვით */
 
-#button{
+.header{
+    width: 1440px;
+    height: 80px;
+    padding: 20px 76px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #E4E3EB;
+    background: #FFF;
+}
+
+.redberryLogo{
+    width: 150px;
+    height: 24px;
+}
+
+/* pop up ფანჯარა როცა ჩნდება, ეს ოვერლეი აქრობს დანარჩენ ეკრანს */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.24;
+    background: #1A1A1F;
+    z-index: 1;
+    display: none;
+}
+
+.header #button{
     display: inline-flex;
     padding: 10px 20px;
     justify-content: center;
@@ -26,6 +52,7 @@ body{
     font-size: 14px;
     font-weight: 500;
     line-height: 20px;
+    border: none;
 }
 
 #button:hover{
@@ -44,8 +71,16 @@ body{
     background: #FFF;
     display: none;
     flex-direction: column;
-    padding: 40px 24px;
-    gap: 24px;
+    padding: 20px 20px 40px 24px;
+    z-index: 2;
+}
+
+.remove{
+    margin-left: auto;
+}
+
+.remove:hover{
+    cursor: pointer;
 }
 
 
@@ -57,6 +92,7 @@ body{
     font-style: normal;
     font-weight: 700;
     line-height: 32px;
+    margin-bottom: 24px;
 }
 
 .enterEmail{
@@ -69,7 +105,6 @@ body{
     color: #1A1A1F;
     font-family: FiraGO;
     font-size: 14px;
-    font-style: normal;
     font-weight: 500;
     line-height: 20px; 
 }
@@ -87,14 +122,13 @@ body{
     display: none;
     flex-direction: row;
     gap: 8px;
-    margin-top: -16px;
+    margin-top: 8px;
 }
 
 .notFound{
     color: #EA1919;
     font-family: FiraGO;
     font-size: 12px;
-    font-style: normal;
     font-weight: 400;
     line-height: 20px;
 }
@@ -103,9 +137,8 @@ body{
     color: #85858D;
     font-family: FiraGO;
     font-size: 14px;
-    font-style: normal;
     font-weight: 400;
-    line-height: 20px; /* 142.857% */
+    line-height: 20px;
 }
 
 .enter{
@@ -120,33 +153,30 @@ body{
     color: #FFF;
     font-family: FiraGO;
     font-size: 14px;
-    font-style: normal;
     font-weight: 500;
     border: none;
+    margin-top: 24px;
 }
 
 .enter:hover{
     cursor: pointer;
 }
 
+
 .successPopUp{
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 64px 24px 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.successPopUp{
-    padding: 64px 24px 40px;
+    padding: 20px 20px 24px 40px;
     width: 480px;
     height: 300px;
     border-radius: 12px;
     background: #FFF;
     display: none;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
 }
 
 .successLogIn{
@@ -155,9 +185,12 @@ body{
     text-align: center;
     font-family: FiraGO;
     font-size: 20px;
-    font-style: normal;
     font-weight: 700;
     line-height: 28px; /* 140% */
+}
+
+.greenIcon{
+    margin-top: 20px;
 }
 
 .agree{
@@ -172,7 +205,6 @@ body{
     color: #FFF;
     font-family: FiraGO;
     font-size: 14px;
-    font-style: normal;
     font-weight: 500;
     line-height: 20px;
     border: none;
