@@ -1,0 +1,252 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.addBlogHeader{
+    width: 1440px;
+    height: 80px;
+    border-bottom: 1px solid #E4E3EB;
+    background: #FFF;
+}
+
+.addBlogHeader img{
+    width: 150px;
+    height: 24px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.addBlogForm{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.addBlogTitle{
+    color: #1A1A1F;
+    font-family: FiraGO;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.uploadPhoto{
+    color: #1A1A1F;
+    font-family: FiraGO;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 8px;
+}
+
+#drop-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    height: 180px;
+    border-radius: 12px;
+    border: 1px dashed #85858D;
+    background: #F4F3FF;
+    cursor: pointer;
+}
+
+.fileImg{
+    width: 40px;
+    height: 40px;
+}
+
+.uploadText{
+  color: #1A1A1F;
+  font-family: FiraGO;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.uploadText span{
+  color: #1A1A1F;
+  font-family: FiraGO;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  text-decoration-line: underline;
+}
+
+#file-input {
+    display: none;
+}
+
+.authorAndTitle{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+
+.authorName,
+.artivleTitle{
+    display: flex;
+    flex-direction: column;
+    margin-right: 24px;
+    align-items: start;
+}
+
+.author,
+.title{
+    color: #1A1A1F;
+    font-family: FiraGO;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.authorInput,
+.titleInput{
+    width: 288px;
+    height: 44px;
+    border-radius: 12px;
+    border: 1px solid #E4E3EB;
+    background: #FCFCFD;
+}
+
+.authorInput::placeholder,
+.titleInput::placeholder{
+    color: #85858D;
+    font-family: FiraGO;
+    font-size: 14px;
+    padding-left: 16px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+ul,
+.titleSymbols{
+    color: #85858D;
+    font-family: FiraGO;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-top: 8px;
+}
+
+.articleDescription{
+    margin-top: 24px;
+}
+
+
+.descriptonText{
+    width: 600px;
+    height: 124px;
+    border-radius: 12px;
+    border: 1px solid #E4E3EB;
+    background: #FCFCFD;
+    margin-top: 8px;
+}
+
+.descriptonText::placeholder{
+    color: #85858D;
+    font-family: FiraGO;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    padding-left: 16px;
+    justify-items:first baseline;
+    padding-top: 12px;
+}
+
+.numOfSym{
+    color: #85858D;
+    font-family: FiraGO;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.dateAndCategory{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+#releaseDate,
+#categoryContainer,
+.emailAddress{
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+}
+
+#releaseDate{
+    margin-right: 24px;
+}
+
+label{
+    color: #1A1A1F;
+    font-family: FiraGO;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+#release,
+#articleCategory{
+    width: 288px;
+    height: 44px;
+    border-radius: 12px;
+    border: 1px solid #E4E3EB;
+    background: #FCFCFD; 
+}
+
+.dateInputContainer {
+    color: #1A1A1F;
+    font-family: FiraGO;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+
+.dateInputContainer img{
+    display: flex;
+    width: 22px;
+    height: 22px;
+    justify-content: center;
+    align-items: center;
+    /* margin-left: 15px;
+    position:absolute; */
+}
+
+/* Hide the default date picker arrow */
+.dateInputContainer input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 1;
+    left: 16px;
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+    background-image: url(./images/calendar.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.dateInputContainer input[type="date"] {
+    color: #1A1A1F;
+    font-family: FiraGO;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    padding-left: 48px;
+}
