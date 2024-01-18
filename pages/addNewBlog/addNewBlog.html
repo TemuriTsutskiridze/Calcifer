@@ -1,12 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../common.css" />
-    <link rel="stylesheet" href="addNewBlog.css" />
-    <script src="addNewBlog.js"></script>
-    <title>Document</title>
-  </head>
-  <body></body>
+<html lang="ge">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./addNewBlog.css">
+    <link rel="stylesheet" href="/Calcifer/common.css">
+    <title>Add Blog</title>
+</head>
+<body>
+    <div class="addBlogHeader">
+        <img src="/Calcifer/images/LOGO-02 3.png" alt="redberry logo">
+    </div>
+    <div class="addBlogForm">
+        <h1 class="addBlogTitle">ბლოგის დამატება</h1>
+
+        <p class="uploadPhoto">ატვირთეთ ფოტო</p>
+
+        <div id="drop-area">
+            <label for="file-input" class="fileLabel">
+                <img src="/Calcifer/images/folder-add.svg" alt="add folder" class="fileImg">
+                <p class="uploadImage">ჩააგდეთ ფაილი აქ ან <span>აირჩიეთ ფაილი</span></p>
+            </label>
+            <input type="file" id="file-input" onchange="handleFile(this.files)">
+        </div>
+
+        <div id="fileIsUploaded" class="fileIsUploaded">
+            <img src="/Calcifer/images/gallery.png" alt="uploaded icon" class="uploadedIcon">
+            <p class="imgName">imgName</p>
+            <p class="removeX"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M7.75732 16.2426L16.2426 7.75736" stroke="#1A1A1F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16.2426 16.2426L7.75732 7.75736" stroke="#1A1A1F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg></p>
+        </div>
+        
+        
+        <div class="authorAndTitle">
+            <div class="authorName">
+                <label for="authorInput" class="author">ავტორი *</label>
+                <input placeholder="შეიყვანეთ ავტორი" type="text" id="authorInput" class="authorInput" required>
+                <ul>
+                    <li>მინიმუმ 4 სიმბოლო</li>
+                    <li>მინიმუმ ორი სიტყვა</li>
+                    <li>მხოლოდ ქართული სიმბოლოები</li>
+                </ul>
+            </div>
+            
+            <div class="articleTitle">
+                <label for="titleInput" class="title">სათაური *</label>
+                <input placeholder="შეიყვანეთ სათაური" type="text" id="titleInput" class="titleInput" required>
+                <p id="titleSymbols" class="titleSymbols">მინიმუმ 4 სიმბოლო</p>
+            </div>
+            
+        </div>
+
+        <div class="articleDescription">
+            <label for="descriptionText" class="descriptionName">აღწერა *</label>
+            <input placeholder="შეიყვანეთ აღწერა" type="text" id="descriptionText" class="descriptionText" required>
+            <p id="numOfSym" class="numOfSym">მინიმუმ ორი სიმბოლო</p>
+        </div>
+        
+
+        <div class="dateAndCategory">
+            <div id="releaseDate">
+                <label for="release">გამოქვეყნების თარიღი *</label>
+                <div class="dateInputContainer">
+                    <input type="date" id="release" name="release" required>
+                </div>
+            </div>
+            
+            <div id="categoryContainer">
+                <label for="articleCategory">კატეგორია *</label>
+                <input type="text" class="articleCategory" id="articleCategory" name="articleCategory" list="categories" placeholder="აირჩიეთ კატეგორია" required>
+                <datalist id="categories">
+                    <option value="მარკეტი">
+                    <option value="აპლიკაცია">
+                    <option value="ხელოვნური ინტელექტი">
+                    <option value="UI/UX">
+                    <option value="კვლევა">
+                    <option value="Figma">
+                </datalist>
+            </div>
+        </div>
+
+        <div class="emailAddress">
+            <label for="email">ელ-ფოსტა</label>
+            <input placeholder="Example@redberry.ge" type="email" class="id" id="email" name="email">
+            <div id="emailError" class="emailError">
+                <img src="/Calcifer/images/info-circle.svg" alt="error email">
+                <p class="emailErrorText">მეილი უნდა მთავრდებოდეს @redberry.ge-ით</p>
+            </div>
+        </div>
+        <button class="publish" id="publish">გამოქვეყნება</button>
+    </div>
+
+    <script src="./addNewBlog.js"></script>
+</body>
 </html>

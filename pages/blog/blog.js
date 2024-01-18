@@ -3,18 +3,13 @@ function getQueryParam(name) {
   const urlParams = new URLSearchParams(window.location.search);
   return urlParams.get(name);
 }
+let post;
 async function loadData(id) {
   const response = await fetch("../../data.json");
   const data = await response.json();
-  const post = data.find((item) => item.id == id); //წამოიღებს მთლიან ობიექტს
-}
-const fullPostContainer = document.getElementById("full-post-container");
-
-const fullPostElement = document.createElement("div");
-fullPostElement.classList.add("blog-post");
-
-fullPostElement.innerHTML = `
-    <img src="${blogId.image}" alt="Blog Image" class="post-image">
+  post = data.find((item) => item.id == id); //წამოიღებს მთლიან ობიექტს
+  fullPostElement.innerHTML = `
+    <img src="${post.image}" alt="Blog Image" class="post-image">
     <div class="post-details">
     <div class="personal-info">
       <h3 class="author">${post.author}</h3>
@@ -26,6 +21,19 @@ fullPostElement.innerHTML = `
         .join("")}</div>
       <p class="description">${post.description}</p>
   `;
+}
+function displayCategories(category) {
+  const categoryButton = document.createElement("button");
+  categoryButton.classList.add("category-button");
+  categoryButton.style.backgroundColor = category.background_color;
+  categoryButton.style.color = category.text_color;
+  categoryButton.textContent = category.name;
+  return categoryButton;
+}
+const fullPostContainer = document.getElementById("full-post-container");
+console.log(fullPostContainer);
+const fullPostElement = document.createElement("div");
+fullPostElement.classList.add("blog-post");
 
 fullPostContainer.appendChild(fullPostElement);
 
