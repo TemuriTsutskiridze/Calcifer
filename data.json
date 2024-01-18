@@ -1,0 +1,210 @@
+[
+  {
+    "id": 1,
+    "title": "EOMM-ის მრჩეველთა საბჭოს ნინო ეგაძე შეუერთდა",
+    "description": "6 თვის შემდეგ ყველის ბრმა დეგუსტაციის დროც დადგა. მაქსიმალური სიზუსტისთვის, ეს პროცესი...",
+    "image": "./image/mob.png",
+    "publish_date": "2023-11-19",
+    "categories": [
+      {
+        "id": 1,
+        "name": "Category name 1",
+        "text_color": "#ffffff",
+        "background_color": "#000000"
+      }
+    ],
+    "author": "ლილე კვარაცხელია"
+  },
+  {
+    "id": 2,
+    "title": "Blog title 2",
+    "description": "Blog description 2",
+    "image": "./image/mob.png",
+    "publish_date": "2023-11-20 ",
+    "categories": [
+      {
+        "id": 2,
+        "name": "Category name 2",
+        "text_color": "#000000",
+        "background_color": "#ffffff"
+      }
+    ],
+    "author": "ტატო სამხარაძე"
+  },
+  {
+    "id": 3,
+    "title": "Blog title 3",
+    "description": "Blog description 3",
+    "image": "./image/mob.png",
+    "publish_date": "2023-11-21 ",
+    "categories": [
+      {
+        "id": 3,
+        "name": "Category name 3",
+        "text_color": "#00ff00",
+        "background_color": "#0000ff"
+      }
+    ],
+    "author": "ტატო სამხარაძე"
+  },
+  {
+    "id": 4,
+    "title": "Title 4",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "image": "./image/mob.png",
+    "publish_date": "2023-11-21",
+    "categories": [
+      {
+        "id": 4,
+        "name": "Category name 3",
+        "text_color": "#00ff00",
+        "background_color": "#0000ff"
+      }
+    ],
+    "author": "Jane Doe"
+  },
+  {
+    "id": 5,
+    "title": "Title 5",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "image": "./image/mob.png",
+    "publish_date": "2023-11-22",
+    "categories": [
+      {
+        "id": 5,
+        "name": "Category name 4",
+        "text_color": "#ff0000",
+        "background_color": "#ffff00"
+      }
+    ],
+    "author": "John Smith"
+  },
+  {
+    "id": 6,
+    "title": "Title 6",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "image": "./image/mob.png",
+    "publish_date": "2023-11-23",
+    "categories": [
+      {
+        "id": 6,
+        "name": "Category name 5",
+        "text_color": "#0000ff",
+        "background_color": "#ff0000"
+      }
+    ],
+    "author": "Alice Johnson"
+  },
+  {
+    "id": 7,
+    "title": "Title 7",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "image": "./image/mob.png",
+    "publish_date": "2023-11-24",
+    "categories": [
+      {
+        "id": 7,
+        "name": "Category name 6",
+        "text_color": "#ffff00",
+        "background_color": "#00ff00"
+      }
+    ],
+    "author": "Bob Miller"
+  },
+  {
+    "id": 8,
+    "title": "Title 8",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "image": "./image/mob.png",
+    "publish_date": "2023-11-25",
+    "categories": [
+      {
+        "id": 8,
+        "name": "Category name 7",
+        "text_color": "#ff00ff",
+        "background_color": "#00ffff"
+      }
+    ],
+    "author": "Eve Davis"
+  },
+  {
+    "id": 9,
+    "title": "Title 9",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "image": "./image/mob.png",
+    "publish_date": "2023-11-26",
+    "categories": [
+      {
+        "id": 9,
+        "name": "Category name 8",
+        "text_color": "#00ffff",
+        "background_color": "#ff00ff"
+      }
+    ],
+    "author": "Charlie Brown"
+  },
+  {
+    "id": 10,
+    "title": "Title 10",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "image": "./image/mob.png",
+    "publish_date": "2023-11-27",
+    "categories": [
+      {
+        "id": 10,
+        "name": "Category name 9",
+        "text_color": "#008000",
+        "background_color": "#800000"
+      }
+    ],
+    "author": "Diana Johnson"
+  },
+  {
+    "id": 11,
+    "title": "Title 11",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "image": "./image/mob.png",
+    "publish_date": "2023-11-28",
+    "categories": [
+      {
+        "id": 11,
+        "name": "Category name 10",
+        "text_color": "#800000",
+        "background_color": "#008000"
+      }
+    ],
+    "author": "Frank White"
+  },
+  {
+    "id": 12,
+    "title": "Title 12",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "image": "./image/mob.png",
+    "publish_date": "2023-11-29",
+    "categories": [
+      {
+        "id": 12,
+        "name": "Category name 11",
+        "text_color": "#800080",
+        "background_color": "#008080"
+      }
+    ],
+    "author": "Grace Miller"
+  },
+  {
+    "id": 13,
+    "title": "Title 13",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "image": "./image/mob.png",
+    "publish_date": "2023-11-30",
+    "categories": [
+      {
+        "id": 13,
+        "name": "Category name 12",
+        "text_color": "#008080",
+        "background_color": "#800080"
+      }
+    ],
+    "author": "Harry Davis"
+  }
+]
