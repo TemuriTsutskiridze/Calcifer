@@ -32,6 +32,7 @@
   gap: 32px;
   margin: 76px;
   width: calc(100% - 152px);
+  justify-content: center;
 }
 
 .blog-post {
