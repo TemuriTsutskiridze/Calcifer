@@ -1,0 +1,325 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.addBlogForm{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.addBlogTitle{
+    color: #1A1A1F;
+    font-family: FiraGO;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.uploadPhoto{
+    color: #1A1A1F;
+    font-family: FiraGO;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 8px;
+}
+
+#drop-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    width: 600px;
+    height: 180px;
+    border-radius: 12px;
+    border: 1px dashed #85858D;
+    background: #F4F3FF;
+}
+
+#drop-area:hover,
+.fileLabel:hover{
+    cursor: pointer;
+}
+
+.fileLabel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.fileImg{
+    width: 40px;
+    height: 40px;
+}
+
+.fileIsUploaded{
+    display: flex;
+    width: 600px;
+    height: 56px;
+    border-radius: 12px;
+    background: #F2F2FA;
+    padding: 16px;
+    gap: 12px;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.imgName{
+    color: #1A1A1F;
+    font-family: FiraGO;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+}
+
+.removeX {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.uploadImage{
+  color: #1A1A1F;
+  font-family: FiraGO;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.uploadImage span{
+  color: #1A1A1F;
+  font-family: FiraGO;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  text-decoration-line: underline;
+}
+
+#file-input {
+    display: none;
+}
+
+.authorAndTitle{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+
+.authorName,
+.articleTitle{
+    display: flex;
+    flex-direction: column;
+    margin-right: 24px;
+    align-items: start;
+}
+
+.author,
+.title,
+.discriptionName,
+label{
+    color: #1A1A1F;
+    font-family: FiraGO;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 8px;
+}
+
+.authorInput,
+.titleInput{
+    width: 288px;
+    height: 44px;
+    border-radius: 12px;
+    border: 1px solid #E4E3EB;
+    background: #FCFCFD;
+}
+
+.authorInput::placeholder,
+.titleInput::placeholder,
+.email::placeholder,
+.articleCategory::placeholder {
+    color: #85858D;
+    font-family: FiraGO;
+    font-size: 14px;
+    padding-left: 16px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+
+ul,
+.titleSymbols{
+    color: #85858D;
+    font-family: FiraGO;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-top: 8px;
+}
+
+.articleDescription{
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+}
+
+
+.descriptionText{
+    width: 600px;
+    height: 124px;
+    border-radius: 12px;
+    border: 1px solid #E4E3EB;
+    background: #FCFCFD;
+}
+
+.descriptionText::placeholder{
+    color: #85858D;
+    font-family: FiraGO;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    padding-left: 16px;
+    justify-items:baseline;
+    padding-top: 12px;
+}
+
+.numOfSym{
+    color: #85858D;
+    font-family: FiraGO;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.dateAndCategory{
+    display: flex;
+    justify-content: space-between;
+}
+
+ul{
+    margin-left: 16px;
+}
+
+#releaseDate,
+#categoryContainer,
+.emailAddress{
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+}
+
+#releaseDate{
+    margin-right: 24px;
+}
+
+label{
+    color: #1A1A1F;
+    font-family: FiraGO;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+#release,
+#articleCategory,
+#email{
+    width: 288px;
+    height: 44px;
+    border-radius: 12px;
+    border: 1px solid #E4E3EB;
+    background: #FCFCFD; 
+}
+
+.dateInputContainer {
+    color: #1A1A1F;
+    font-family: FiraGO;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+
+.dateInputContainer img{
+    display: flex;
+    width: 22px;
+    height: 22px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hide the default date picker arrow */
+.dateInputContainer input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 1;
+    left: 16px;
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+    background-image: url(/Calcifer/images/calendar.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.dateInputContainer input[type="date"] {
+    color: #1A1A1F;
+    font-family: FiraGO;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    padding-left: 48px;
+}
+
+.emailError{
+    display: none;
+    gap: 8px;
+    margin-top: 8px;
+    width: 288px;
+    align-items:flex-start;
+}
+
+.emailErrorText{
+    color: #EA1919;
+    font-family: FiraGO;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px; /* 166.667% */
+}
+
+#publish{
+    display: flex;
+    width: 288px;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    background: #E4E3EB;
+    color: #FFF;
+    font-family: FiraGO;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    border: none;
+    margin-top: 50px;
+    display: block;
+    margin-left: auto;
+}
+
+.publish:hover{
+    cursor: pointer;
+}
