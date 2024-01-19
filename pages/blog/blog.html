@@ -1,12 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ge">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="./blog.css" />
     <link rel="stylesheet" href="../../common.css" />
-    <link rel="stylesheet" href="blog.css" />
-    <script src="blog.js" defer></script>
-    <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <script src="./blog.js" defer></script>
+    <script src="../../script.js" defer></script>
+    <div class="overlay"></div>
+    <div class="header">
+      <img
+        class="redberryLogo"
+        src="../../images/LOGO-02 3.png"
+        alt="redberry"
+      />
+      <button id="button">შესვლა</button>
+    </div>
+    <div id="logInPopUp" class="logInPopUp">
+      <p class="remove">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+        >
+          <path
+            d="M7.75732 16.2426L16.2426 7.75736"
+            stroke="#1A1A1F"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M16.2426 16.2426L7.75732 7.75736"
+            stroke="#1A1A1F"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </p>
+      <h2 class="entering">შესვლა</h2>
+      <div class="enterEmail">
+        <h3 class="email">ელ. ფოსტა</h3>
+        <input
+          class="inputMail"
+          placeholder="Example@redberry.ge"
+          type="text"
+        />
+      </div>
+
+      <div class="noMail">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+        >
+          <path
+            d="M10.0002 1.66666C5.41683 1.66666 1.66683 5.41666 1.66683 10C1.66683 14.5833 5.41683 18.3333 10.0002 18.3333C14.5835 18.3333 18.3335 14.5833 18.3335 10C18.3335 5.41666 14.5835 1.66666 10.0002 1.66666Z"
+            fill="#EA1919"
+          />
+          <path
+            d="M10 13.3333L10 9.16666"
+            stroke="white"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M10.0044 6.66667L9.99691 6.66667"
+            stroke="white"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        <h4 class="notFound">ელ ფოსტა არ მოიძებნა</h4>
+      </div>
+
+      <button class="enter">შესვლა</button>
+    </div>
+    <div id="full-post-container">
+      <svg
+        id="back-icon"
+        onclick="goBack()"
+        width="44"
+        height="44"
+        viewBox="0 0 44 44"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect width="44" height="44" rx="22" fill="white" />
+        <path
+          d="M18 23C18.5523 23 19 22.5523 19 22C19 21.4477 18.5523 21 18 21L18 23ZM17.1929 21.2929C16.8024 21.6834 16.8024 22.3166 17.1929 22.7071L23.5569 29.0711C23.9474 29.4616 24.5805 29.4616 24.9711 29.0711C25.3616 28.6805 25.3616 28.0474 24.9711 27.6569L19.3142 22L24.9711 16.3431C25.3616 15.9526 25.3616 15.3195 24.9711 14.9289C24.5805 14.5384 23.9474 14.5384 23.5569 14.9289L17.1929 21.2929ZM18 21L17.9 21L17.9 23L18 23L18 21Z"
+          fill="#1A1A1F"
+        />
+      </svg>
+    </div>
+    <div id="similar-post-container">
+      <div class="slider-head">
+        <h3 class="similar-post-container-title">მსგავსი სტატიები</h3>
+        <div class="back-svg-container">
+          <svg
+            width="44"
+            height="44"
+            viewBox="0 0 44 44"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="44" height="44" rx="22" fill="#E4E3EB" />
+            <path
+              d="M18 23C18.5523 23 19 22.5523 19 22C19 21.4477 18.5523 21 18 21L18 23ZM17.1929 21.2929C16.8024 21.6834 16.8024 22.3166 17.1929 22.7071L23.5569 29.0711C23.9474 29.4616 24.5805 29.4616 24.9711 29.0711C25.3616 28.6805 25.3616 28.0474 24.9711 27.6569L19.3142 22L24.9711 16.3431C25.3616 15.9526 25.3616 15.3195 24.9711 14.9289C24.5805 14.5384 23.9474 14.5384 23.5569 14.9289L17.1929 21.2929ZM18 21L17.9 21L17.9 23L18 23L18 21Z"
+              fill="#F3F2FA"
+            />
+          </svg>
+          <svg
+            width="44"
+            height="44"
+            viewBox="0 0 44 44"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="44" height="44" rx="22" fill="#E4E3EB" />
+            <path
+              d="M18 23C18.5523 23 19 22.5523 19 22C19 21.4477 18.5523 21 18 21L18 23ZM17.1929 21.2929C16.8024 21.6834 16.8024 22.3166 17.1929 22.7071L23.5569 29.0711C23.9474 29.4616 24.5805 29.4616 24.9711 29.0711C25.3616 28.6805 25.3616 28.0474 24.9711 27.6569L19.3142 22L24.9711 16.3431C25.3616 15.9526 25.3616 15.3195 24.9711 14.9289C24.5805 14.5384 23.9474 14.5384 23.5569 14.9289L17.1929 21.2929ZM18 21L17.9 21L17.9 23L18 23L18 21Z"
+              fill="#F3F2FA"
+            />
+          </svg>
+        </div>
+      </div>
+      <div id="similar-posts"></div>
+    </div>
+  </body>
 </html>
