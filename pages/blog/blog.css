@@ -17,6 +17,6 @@ body {
   justify-content: center;
   margin-top: 40px;
 }
-.back-icon {
+#back-icon {
   transform: translateX(-240px);
 }

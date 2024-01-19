@@ -44,3 +44,8 @@ if (blogId) {
 } else {
   console.error("No blog ID specified in the query parameters.");
 }
+//svg ფუნქცია,წინა გვერდზე დასაბრუნებლად
+//blog.html-ში ვამატებ svg -ს onclick-ს რომელშიც ვიძახებ goBack ფუნქციას
+function goBack() {
+  window.history.back();
+}
