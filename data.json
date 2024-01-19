@@ -8,7 +8,19 @@
     "categories": [
       {
         "id": 1,
-        "name": "Category name 1",
+        "name": "მარკეტი",
+        "text_color": "#ffffff",
+        "background_color": "#000000"
+      },
+      {
+        "id": 1,
+        "name": "მარკეტი",
+        "text_color": "#ffffff",
+        "background_color": "#000000"
+      },
+      {
+        "id": 1,
+        "name": "მარკეტი",
         "text_color": "#ffffff",
         "background_color": "#000000"
       }
