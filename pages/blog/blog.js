@@ -9,7 +9,7 @@ async function loadData(id) {
   const data = await response.json();
   post = data.find((item) => item.id == id); //წამოიღებს მთლიან ობიექტს
   fullPostElement.innerHTML = `
-    <img src="${post.image}" alt="Blog Image" class="post-image">
+    <img src="../../image/mob.png" alt="Blog Image" class="post-image">
     <div class="post-details">
     <div class="personal-info">
       <h3 class="author">${post.author}</h3>
