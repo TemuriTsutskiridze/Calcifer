@@ -1,4 +1,96 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // img upload
+    let dropArea = document.getElementById("drop-area");
+    let inputFile = document.getElementById("input-file");
+    let fileIsUploaded = document.getElementById("fileIsUploaded");
+    let file;
+    
+    inputFile.addEventListener("change", uploadImage);
+    
+    function uploadImage() {
+        file = inputFile.files[0];
+    
+        if (file && file.type.startsWith('image/')) {
+            let reader = new FileReader();
+    
+            reader.onload = function (e) {
+                console.log("img upload function called");
+                updateImgUploadView();
+                console.log(file);
+                // createAndAppendNewDataObject(imageName, imgLink);
+                // let imgLink = e.target.result;      
+            };
+    
+            reader.readAsDataURL(file);
+        } else {
+            console.log("No valid image file selected");
+        }
+    }
+    
+    function updateImgUploadView() {
+        dropArea.style.display = "none";
+        fileIsUploaded.style.display = "block";
+        fileIsUploaded.textContent = `${file.name}`;
+        console.log("updateImgUploadView function called")
+    }
+
+
+    // function createAndAppendNewDataObject(imageName, imgLink) {
+    //     let newData = {
+    //         id: 90,
+    //         title: titleInput,
+    //         description: "New Blog Description",
+    //         image: imgLink,
+    //         publish_date: "2024-01-19",
+    //         categories: [
+    //             {
+    //                 id: 14,
+    //                 name: "New Category",
+    //                 text_color: "#000000",
+    //                 background_color: "#ffffff"
+    //             }
+    //         ],
+    //         author: "New Author"
+    //     };
+
+    //     fetch('./data1.json', {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json',
+    //         },
+    //         body: JSON.stringify(newData, null, 2),
+    //     })
+    //     .then(() => console.log('Data updated successfully'))
+    //     .catch(error => console.error('Error updating data:', error));
+    // }
+
+
+    dropArea.addEventListener("dragover", function (e) {
+        e.preventDefault();
+        dropArea.classList.add("drag-over");
+    });
+
+    dropArea.addEventListener("dragleave", function () {
+        dropArea.classList.remove("drag-over");
+    });
+
+    dropArea.addEventListener("drop", function (e) {
+        e.preventDefault();
+        dropArea.classList.remove("drag-over");
+        inputFile.files = e.dataTransfer.files;
+        uploadImage();
+    });
+    
+    // Remove uploaded file
+    let removeBtn = document.getElementById('removeX');
+    // let fileIsUploaded = document.getElementById("fileIsUploaded");
+
+    removeBtn.addEventListener('click', function () {
+        fileIsUploaded.style.display = 'none';
+        dropArea.style.display = 'flex';
+    });
+    
+
     // Author validation
     let authorInput = document.getElementById("authorInput");
     let listItems = document.querySelectorAll('.authorName ul li');
@@ -38,19 +130,11 @@ document.addEventListener("DOMContentLoaded", function () {
         checkAllValidations();
     });
 
-    // Remove uploaded file
-    const dropArea = document.getElementById("drop-area");
-    const removeBtn = document.getElementsByClassName('removeX')[0];
-    const fileIsUploaded = document.getElementById("fileIsUploaded");
 
-    removeBtn.addEventListener('click', function () {
-        fileIsUploaded.style.display = 'none';
-        dropArea.style.display = 'flex';
-    });
 
     function validateAuthor() {
         let authorInputValue = authorInput.value;
-        const georgianAlphabetRegex = /^[\u10A0-\u10FF\s.,;:'"-]+$/;
+        let georgianAlphabetRegex = /^[\u10A0-\u10FF\s.,;:'"-]+$/;
 
         if (authorInputValue.length < 4) {
             firstListItem.style.color = "#EA1919";
@@ -92,7 +176,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function validateEmail() {
-        const re = /@redberry\.ge$/;
+        let re = /@redberry\.ge$/;
 
         if (re.test(emailInput.value.trim())) {
             emailInput.style.borderColor = "";
@@ -116,7 +200,7 @@ document.addEventListener("DOMContentLoaded", function () {
             emailInput.style.borderColor !== "#EA1919"
         );
 
-        const publishBtn = document.getElementById("publish");
+        let publishBtn = document.getElementById("publish");
 
         if (isValid) {
             publishBtn.style.background = "green";
