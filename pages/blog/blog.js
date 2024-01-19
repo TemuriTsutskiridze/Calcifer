@@ -21,7 +21,18 @@ async function loadData(id) {
         .join("")}</div>
       <p class="description">${post.description}</p>
   `;
+  //მომაქვს დაკლიკულ პოსტზე არსებული კატეგორიები
+  const clickedPostCategories = post.categories.map(
+    (categoryName) => categoryName.name
+  );
+  //ვაბრუნებ ობიექტს რომლის ერთი კატეგორია მაინც ემთხვევა მთლიანი პოსტის კატეგორიებს
+  const similarPosts = data.filter((postObj) => {
+    return postObj.categories.some((category) =>
+      clickedPostCategories.includes(category.name)
+    );
+  });
 }
+
 function displayCategories(category) {
   const categoryButton = document.createElement("button");
   categoryButton.classList.add("category-button");
@@ -44,8 +55,15 @@ if (blogId) {
 } else {
   console.error("No blog ID specified in the query parameters.");
 }
+/*********************************/
+/*SLIDER SECTION*/
+/*********************************/
 //svg ფუნქცია,წინა გვერდზე დასაბრუნებლად
 //blog.html-ში ვამატებ svg -ს onclick-ს რომელშიც ვიძახებ goBack ფუნქციას
 function goBack() {
   window.history.back();
 }
+/*********************************/
+/*SLIDER SECTION*/
+/*********************************/
+//მომაქვს დაკლიკულ პოსტზე არსებული კატეგორიები
