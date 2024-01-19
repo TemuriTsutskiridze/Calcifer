@@ -31,6 +31,37 @@ async function loadData(id) {
       clickedPostCategories.includes(category.name)
     );
   });
+  // renderSimilarPosts არის ფუნქცია სადაც ვლუპავ დაბრუნებულ მასივს foreeach-ით და ვამატებ კონტეიბერსი
+  //მსგავს პოსტებს
+  function renderSimilarPosts() {
+    const similarPostsContainer = document.getElementById("similar-posts");
+    similarPostsContainer.innerHTML = ""; // თავიდან უნდა გვქონდეს ცარიელი მასივი
+
+    //დავლიპოთ და დავამატოთ html-ში
+    similarPosts.forEach((post) => {
+      const postElement = document.createElement("div");
+      postElement.innerHTML = `
+      <img src="../../image/mob.png" alt="Blog Image" class="post-image">
+      <div class="post-details">
+        <div class="personal-info">
+          <h3 class="author">${post.author}</h3>
+          <h4 class="publish-date">${post.publish_date}</h4>
+        </div>
+        <h2 class="title">${post.title}</h2>
+        <div class="display-categories">${post.categories
+          .map((category) => displayCategories(category).outerHTML)
+          .join("")}</div>
+        <p class="description">${post.description}</p>
+        <a href="fullpost.html">See more...</a>
+      </div>
+    `;
+
+      similarPostsContainer.appendChild(postElement);
+    });
+  }
+
+  // ვიძახებ მსგავსი პოსტების დამატების ფუნქციას.
+  renderSimilarPosts();
 }
 
 function displayCategories(category) {
