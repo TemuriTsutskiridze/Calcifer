@@ -1,6 +1,8 @@
 const enterPopUp = document.getElementById('button');
+const addBlogBtn = document.getElementById('addBlogBtn');
 const logInPopUp = document.getElementById('logInPopUp');
 const removePopUp = document.querySelector('.remove');
+const removeSigned = document.querySelector('.removeS');
 const successPopUp = document.getElementById('successPopUp')
 const enterButton = document.querySelector('.enter');
 const emailInput = document.querySelector('.inputMail');
@@ -17,7 +19,11 @@ enterPopUp.addEventListener('click', function() {
 removePopUp.addEventListener('click', function(){
     overlay.style.display = 'none';
     logInPopUp.style.display = 'none';
-    successPopUp.style.display='none';
+})
+
+removeSigned.addEventListener("click", function(){
+  overlay.style.display = 'none';
+  successPopUp.style.display='none';
 })
 
 // აქ შეგვყავს მეილი და მოწმდება რამდენად ვალიდურია
@@ -37,6 +43,8 @@ enterButton.addEventListener('click', function() {
 agreeButton.addEventListener('click', function(){
     successPopUp.style.display='none';
     overlay.style.display = 'none';
+    addBlogBtn.style.display='inline-flex';
+    enterPopUp.style.display='none';
 })
 
 

@@ -13,11 +13,13 @@
     display: none;
 }
 
-.header #button{
+.header #button,
+#addBlogBtn{
     display: inline-flex;
     padding: 10px 20px;
     justify-content: center;
     align-items: center;
+    margin-left: auto;
     gap: 10px;
     border-radius: 8px;
     background: #5D37F3;
@@ -27,6 +29,11 @@
     font-weight: 500;
     line-height: 20px;
     border: none;
+    cursor: pointer;
+}
+#addBlogBtn{
+  white-space: nowrap;
+  display: none;
 }
 
 #button:hover{
@@ -49,11 +56,9 @@
     z-index: 2;
 }
 
-.remove{
+.remove,
+.removeS{
     margin-left: auto;
-}
-
-.remove:hover{
     cursor: pointer;
 }
 

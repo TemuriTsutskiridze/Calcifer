@@ -8,6 +8,9 @@
 
 body {
   font-family: "FiraGO", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .addBlogHeader{
@@ -28,14 +31,8 @@ body {
 
 
 
-body{
-    display: flex;
-    justify-content: center;
-}
-
-
 .header{
-    width: 1440px;
+    width: auto;
     height: 80px;
     padding: 20px 76px;
     display: flex;
