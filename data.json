@@ -39,6 +39,12 @@
         "name": "Category name 2",
         "text_color": "#000000",
         "background_color": "#ffffff"
+      },
+      {
+        "id": 3,
+        "title": "ხელოვნური ინტელექტი",
+        "text_color": "#FFFFFF",
+        "background_color": "#B11CD6"
       }
     ],
     "author": "ტატო სამხარაძე"
@@ -71,6 +77,12 @@
         "name": "Category name 3",
         "text_color": "#00ff00",
         "background_color": "#0000ff"
+      },
+      {
+        "id": 1,
+        "name": "UI/UX",
+        "text_color": "#ffffff",
+        "background_color": "#000000"
       }
     ],
     "author": "Jane Doe"
@@ -87,6 +99,12 @@
         "name": "Category name 4",
         "text_color": "#ff0000",
         "background_color": "#ffff00"
+      },
+      {
+        "id": 3,
+        "title": "ხელოვნური ინტელექტი",
+        "text_color": "#FFFFFF",
+        "background_color": "#B11CD6"
       }
     ],
     "author": "John Smith"

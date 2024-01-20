@@ -87,3 +87,44 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+#similar-posts {
+  display: flex;
+  gap: 32px;
+  margin: 76px;
+  width: calc(100% - 152px);
+  justify-content: center;
+}
+.author {
+  color: #1a1a1f;
+  font-weight: 500;
+  line-height: 20px;
+  font-size: 16px;
+}
+.publish-date {
+  color: #85858d;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+.title {
+  color: #1a1a1f;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  max-width: 408px;
+}
+.description {
+  color: #404049;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Adjust the number of lines you want to display */
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  width: 408px;
+}
+.display-categories {
+  max-width: 408px;
+}

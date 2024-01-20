@@ -21,6 +21,7 @@ async function loadData(id) {
         .join("")}</div>
       <p class="full-post-description">${post.description}</p>
   `;
+
   //მომაქვს დაკლიკულ პოსტზე არსებული კატეგორიები
   const clickedPostCategories = post.categories.map(
     (categoryName) => categoryName.name
