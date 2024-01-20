@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     // img upload
     let dropArea = document.getElementById("drop-area");
-    let inputFile = document.getElementById("input-file");
+    let inputFile = document.getElementById("file-input");
     let fileIsUploaded = document.getElementById("fileIsUploaded");
     let file;
     
@@ -120,6 +120,68 @@ document.addEventListener("DOMContentLoaded", function () {
         validateDescription();
         checkAllValidations();
     });
+
+    // choose category
+    let arrowDown = document.getElementById("arrow-down");
+    let listCategory = document.getElementById("categoryList");
+    let emailBlock = document.getElementById('emailAddress');
+    let articleCategory = document.getElementById('articleCategory');
+    
+
+    arrowDown.addEventListener("click", function() {
+        console.log("Clicked on arrow-down");
+        listCategory.style.display = (listCategory.style.display === "none" || listCategory.style.display === "") ? "flex" : "none";
+        emailBlock.style.marginTop = (emailBlock.style.marginTop === "-122px") ? "24px" : "-122px";
+    });
+
+// Array of element IDs
+const elementIds = ["market", "app", "ai", "ui", "research", "figma"];
+
+function copyContent(element) {
+  // Check if the container has initial text content
+  if (articleCategory.innerHTML === "აირჩიეთ კატეგორია") {
+    // Clear the initial text content in the container
+    articleCategory.innerHTML = "";
+  }
+
+  // Create a div to hold the cloned element and the close button
+  let wrapperDiv = document.createElement("div");
+  wrapperDiv.classList.add("copied-element-wrapper");
+
+  // Clone the clicked element
+  let clonedElement = element.cloneNode(true);
+
+  // Create a close button
+  let closeButton = document.createElement("span");
+  closeButton.classList.add("close-button");
+  closeButton.innerHTML = `<img src="images/add.svg" alt="Close">`;
+
+  // Add a click event listener to the close button
+  closeButton.addEventListener("click", function () {
+    // Remove the corresponding element when the close button is clicked
+    wrapperDiv.remove();
+  });
+
+  // Append the cloned element and close button to the wrapper div
+  wrapperDiv.appendChild(clonedElement);
+  wrapperDiv.appendChild(closeButton);
+
+
+  // Append the wrapper div to the copied elements container
+  articleCategory.appendChild(wrapperDiv);
+}
+
+// Add event listeners to each element using a loop
+elementIds.forEach(function (id) {
+  let element = document.getElementById(id);
+  element.addEventListener("click", function () {
+    copyContent(element);
+  });
+});
+
+
+    
+    
 
     // Email validation
     let emailInput = document.getElementById('email');
