@@ -151,10 +151,20 @@ function copyContent(element) {
   // Clone the clicked element
   let clonedElement = element.cloneNode(true);
 
+// Get the computed background color of the original element
+let originalElementStyles = window.getComputedStyle(element);
+let originalBackgroundColor = originalElementStyles.backgroundColor;
+// Set the background color of the wrapper div to be the same as the original element
+wrapperDiv.style.backgroundColor = originalBackgroundColor;
+
+// Make the background color of the cloned element transparent
+clonedElement.style.backgroundColor = 'transparent';
+
   // Create a close button
   let closeButton = document.createElement("span");
   closeButton.classList.add("close-button");
-  closeButton.innerHTML = `<img src="images/add.svg" alt="Close">`;
+  closeButton.innerHTML = `<img src="/Calcifer/images/add.svg" alt="close">`;
+
 
   // Add a click event listener to the close button
   closeButton.addEventListener("click", function () {
@@ -179,9 +189,6 @@ elementIds.forEach(function (id) {
   });
 });
 
-
-    
-    
 
     // Email validation
     let emailInput = document.getElementById('email');
@@ -251,23 +258,41 @@ elementIds.forEach(function (id) {
     }
 
 
-    // ეს ვერ ავამუშავე ჯერ
-    function checkAllValidations() {
-        let isValid = (
-            firstListItem.style.color === "#14D81C" &&
-            secondListItem.style.color === "#14D81C" &&
-            thirdListItem.style.color === "#14D81C" &&
-            titleSymbols.style.color === "#14D81C" &&
-            numOfSym.style.color === "#14D81C" &&
-            emailInput.style.borderColor !== "#EA1919"
-        );
+    // Function to check all validations
+    let publishBtn = document.getElementById("publish");
+function checkAllValidations() {
+    let isValid =
+        firstListItem.style.color === "#14D81C" &&
+        secondListItem.style.color === "#14D81C" &&
+        thirdListItem.style.color === "#14D81C" &&
+        titleSymbols.style.color === "#14D81C" &&
+        numOfSym.style.color === "#14D81C" &&
+        emailInput.style.borderColor !== "#EA1919";
 
-        let publishBtn = document.getElementById("publish");
 
-        if (isValid) {
-            publishBtn.style.background = "green";
-        } else {
-            publishBtn.style.background = "#E4E3EB";
-        }
+
+    if (isValid) {
+        publishBtn.style.background = "green";
+    } else {
+        publishBtn.style.background = "#E4E3EB";
     }
+}
+
+// Event listener to show success message
+publishBtn.addEventListener("click", function () {
+    successPopUp.style.display = "flex";
+    successOverlay.style.display = "flex";
+});
+
+// Event listener to remove success message
+let xRemove = document.getElementById('xRemove');
+let successPopUp = document.getElementById('addSuccess');
+let successOverlay = document.getElementById('overlayPage');
+
+xRemove.addEventListener("click", function () {
+    successPopUp.style.display = 'none';
+    successOverlay.style.display = 'none';
+});
+
+    
 });
