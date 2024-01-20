@@ -16,9 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
             reader.onload = function (e) {
                 console.log("img upload function called");
                 updateImgUploadView();
-                console.log(file);
-                // createAndAppendNewDataObject(imageName, imgLink);
-                // let imgLink = e.target.result;      
+                console.log(file);  
             };
     
             reader.readAsDataURL(file);
@@ -33,36 +31,6 @@ document.addEventListener("DOMContentLoaded", function () {
         fileIsUploaded.textContent = `${file.name}`;
         console.log("updateImgUploadView function called")
     }
-
-
-    // function createAndAppendNewDataObject(imageName, imgLink) {
-    //     let newData = {
-    //         id: 90,
-    //         title: titleInput,
-    //         description: "New Blog Description",
-    //         image: imgLink,
-    //         publish_date: "2024-01-19",
-    //         categories: [
-    //             {
-    //                 id: 14,
-    //                 name: "New Category",
-    //                 text_color: "#000000",
-    //                 background_color: "#ffffff"
-    //             }
-    //         ],
-    //         author: "New Author"
-    //     };
-
-    //     fetch('./data1.json', {
-    //         method: 'POST',
-    //         headers: {
-    //             'Content-Type': 'application/json',
-    //         },
-    //         body: JSON.stringify(newData, null, 2),
-    //     })
-    //     .then(() => console.log('Data updated successfully'))
-    //     .catch(error => console.error('Error updating data:', error));
-    // }
 
 
     dropArea.addEventListener("dragover", function (e) {
@@ -81,6 +49,59 @@ document.addEventListener("DOMContentLoaded", function () {
         uploadImage();
     });
     
+
+// adding article data to server
+let publishBtn = document.getElementById("publish");
+publishBtn.addEventListener("click", function () {
+    // Collect form data
+    let title = document.getElementById("titleInput").value;
+    let description = document.getElementById("descriptionText").value;
+    let image = file ? file.name : "";
+    let publishDate = document.getElementById("release").value;
+    let category = document.getElementById("articleCategory").innerText;
+    let author = document.getElementById("authorInput").value;
+
+    // Create data object
+    let newData = {
+        id: Math.floor(Math.random() * 1000000) + 1;,
+        title: title,
+        description: description,
+        image: image,
+        publish_date: publishDate,
+        categories: [
+            {
+                id: this.id;
+                name: category,
+                text_color: "#ffffff",
+                background_color: "#000000"
+            }
+        ],
+        author: author
+    };
+
+    // Fetch existing data from the server
+    fetch('/Calcifer/data1.json')
+        .then(response => response.json())
+        .then(existingData => {
+            existingData.push(newData);
+
+            // Save the updated data back to the server
+            return fetch('/Calcifer/data1.json', {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(existingData, null, 2),
+            });
+        })
+        .then(() => {
+            console.log('Data added successfully');
+            showSuccessMessage();
+        })
+        .catch(error => console.error('Error adding data:', error));
+});
+
+
     // Remove uploaded file
     let removeBtn = document.getElementById('removeX');
     // let fileIsUploaded = document.getElementById("fileIsUploaded");
@@ -138,26 +159,22 @@ document.addEventListener("DOMContentLoaded", function () {
 const elementIds = ["market", "app", "ai", "ui", "research", "figma"];
 
 function copyContent(element) {
-  // Check if the container has initial text content
   if (articleCategory.innerHTML === "აირჩიეთ კატეგორია") {
-    // Clear the initial text content in the container
     articleCategory.innerHTML = "";
   }
 
-  // Create a div to hold the cloned element and the close button
+
   let wrapperDiv = document.createElement("div");
   wrapperDiv.classList.add("copied-element-wrapper");
 
   // Clone the clicked element
   let clonedElement = element.cloneNode(true);
 
-// Get the computed background color of the original element
 let originalElementStyles = window.getComputedStyle(element);
 let originalBackgroundColor = originalElementStyles.backgroundColor;
-// Set the background color of the wrapper div to be the same as the original element
 wrapperDiv.style.backgroundColor = originalBackgroundColor;
 
-// Make the background color of the cloned element transparent
+
 clonedElement.style.backgroundColor = 'transparent';
 
   // Create a close button
@@ -259,7 +276,7 @@ elementIds.forEach(function (id) {
 
 
     // Function to check all validations
-    let publishBtn = document.getElementById("publish");
+    // let publishBtn = document.getElementById("publish");
 function checkAllValidations() {
     let isValid =
         firstListItem.style.color === "#14D81C" &&
