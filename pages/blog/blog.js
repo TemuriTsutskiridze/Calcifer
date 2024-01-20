@@ -9,17 +9,17 @@ async function loadData(id) {
   const data = await response.json();
   post = data.find((item) => item.id == id); //წამოიღებს მთლიან ობიექტს
   fullPostElement.innerHTML = `
-    <img src="../../image/mob.png" alt="Blog Image" class="post-image">
-    <div class="post-details">
-    <div class="personal-info">
-      <h3 class="author">${post.author}</h3>
-      <h4 class="publish-date">${post.publish_date}</h4>
+    <img src="../../image/mob.png" alt="Blog Image" class="full-post-image">
+    <div class="full-post-details">
+    <div class="full-personal-info">
+      <h3 class="full-post-author">${post.author}</h3>
+      <h4 class="full-post-publish-date">${post.publish_date}</h4>
       </div>
-      <h2 class="title">${post.title}</h2>
+      <h2 class="full-post-title">${post.title}</h2>
       <div class="display-categories">${post.categories
         .map((category) => displayCategories(category).outerHTML)
         .join("")}</div>
-      <p class="description">${post.description}</p>
+      <p class="full-post-description">${post.description}</p>
   `;
   //მომაქვს დაკლიკულ პოსტზე არსებული კატეგორიები
   const clickedPostCategories = post.categories.map(
@@ -75,7 +75,7 @@ function displayCategories(category) {
 const fullPostContainer = document.getElementById("full-post-container");
 console.log(fullPostContainer);
 const fullPostElement = document.createElement("div");
-fullPostElement.classList.add("blog-post");
+fullPostElement.classList.add("full-blog-post");
 
 fullPostContainer.appendChild(fullPostElement);
 

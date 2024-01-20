@@ -1,191 +1,187 @@
-
-
 /* pop up ფანჯარა როცა ჩნდება, ეს ოვერლეი აქრობს დანარჩენ ეკრანს */
 .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.24;
-    background: #1A1A1F;
-    z-index: 1;
-    display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.24;
+  background: #1a1a1f;
+  z-index: 1;
+  display: none;
 }
 
-.header #button{
-    display: inline-flex;
-    padding: 10px 20px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 8px;
-    background: #5D37F3;
-    color: #FFF;
-    font-family: FiraGO;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 20px;
-    border: none;
+.header #button {
+  display: inline-flex;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  background: #5d37f3;
+  color: #fff;
+  font-family: FiraGO;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  border: none;
 }
 
-#button:hover{
-    cursor: pointer;
+#button:hover {
+  cursor: pointer;
 }
 
 .logInPopUp {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 480px;
-    min-height: 272px;
-    height: fit-content;
-    border-radius: 12px;
-    background: #FFF;
-    display: none;
-    flex-direction: column;
-    padding: 20px 20px 40px 24px;
-    z-index: 2;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 480px;
+  min-height: 272px;
+  height: fit-content;
+  border-radius: 12px;
+  background: #fff;
+  display: none;
+  flex-direction: column;
+  padding: 20px 20px 40px 24px;
+  z-index: 2;
 }
 
-.remove{
-    margin-left: auto;
+.remove {
+  margin-left: auto;
 }
 
-.remove:hover{
-    cursor: pointer;
+.remove:hover {
+  cursor: pointer;
 }
 
-
-.entering{
-    color: #1A1A1F;
-    text-align: center;
-    font-family: FiraGO;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 32px;
-    margin-bottom: 24px;
+.entering {
+  color: #1a1a1f;
+  text-align: center;
+  font-family: FiraGO;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  margin-bottom: 24px;
 }
 
-.enterEmail{
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+.enterEmail {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-.email{
-    color: #1A1A1F;
-    font-family: FiraGO;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 20px; 
+.email {
+  color: #1a1a1f;
+  font-family: FiraGO;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
 }
 
-.inputMail{
-    width: 432px;
-    height: 44px;
-    border-radius: 12px;
-    border: 1.5px solid #5D37F3;
-    background: #F7F7FF;
-    padding-left: 16px;
+.inputMail {
+  width: 432px;
+  height: 44px;
+  border-radius: 12px;
+  border: 1.5px solid #5d37f3;
+  background: #f7f7ff;
+  padding-left: 16px;
 }
 
-.noMail{
-    display: none;
-    flex-direction: row;
-    gap: 8px;
-    margin-top: 8px;
+.noMail {
+  display: none;
+  flex-direction: row;
+  gap: 8px;
+  margin-top: 8px;
 }
 
-.notFound{
-    color: #EA1919;
-    font-family: FiraGO;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 20px;
+.notFound {
+  color: #ea1919;
+  font-family: FiraGO;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
 }
 
-.inputMail::placeholder{
-    color: #85858D;
-    font-family: FiraGO;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 20px;
+.inputMail::placeholder {
+  color: #85858d;
+  font-family: FiraGO;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
 }
 
-.enter{
-    display: flex;
-    width: 432px;
-    padding: 10px 20px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 8px;
-    background: #5D37F3;
-    color: #FFF;
-    font-family: FiraGO;
-    font-size: 14px;
-    font-weight: 500;
-    border: none;
-    margin-top: 24px;
+.enter {
+  display: flex;
+  width: 432px;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  background: #5d37f3;
+  color: #fff;
+  font-family: FiraGO;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  margin-top: 24px;
 }
 
-.enter:hover{
-    cursor: pointer;
+.enter:hover {
+  cursor: pointer;
 }
 
-
-.successPopUp{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px 20px 24px 40px;
-    width: 480px;
-    height: 300px;
-    border-radius: 12px;
-    background: #FFF;
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    z-index: 2;
+.successPopUp {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px 20px 24px 40px;
+  width: 480px;
+  height: 300px;
+  border-radius: 12px;
+  background: #fff;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
 }
 
-.successLogIn{
-    margin: 16px 0px 48px;
-    color: #1A1A1F;
-    text-align: center;
-    font-family: FiraGO;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 28px; /* 140% */
+.successLogIn {
+  margin: 16px 0px 48px;
+  color: #1a1a1f;
+  text-align: center;
+  font-family: FiraGO;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px; /* 140% */
 }
 
-.greenIcon{
-    margin-top: 20px;
+.greenIcon {
+  margin-top: 20px;
 }
 
-.agree{
-    display: flex;
-    width: 432px;
-    padding: 10px 20px;
-    border-radius: 8px;
-    background: #5D37F3;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    color: #FFF;
-    font-family: FiraGO;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 20px;
-    border: none;
+.agree {
+  display: flex;
+  width: 432px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background: #5d37f3;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  font-family: FiraGO;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  border: none;
 }
 
-.agree:hover{
-    cursor: pointer;
+.agree:hover {
+  cursor: pointer;
 }
 
 .header-title {
@@ -205,10 +201,10 @@
   justify-content: center;
 }
 .category-button {
-  margin: 10px;
-  padding: 10px;
+  margin: 8px;
+  padding: 16px;
   border: none;
-  border-radius: 5px;
+  border-radius: 30px;
   font-weight: bold;
   cursor: pointer;
 }
@@ -269,4 +265,3 @@
   align-items: center;
   width: fit-content;
 }
-
