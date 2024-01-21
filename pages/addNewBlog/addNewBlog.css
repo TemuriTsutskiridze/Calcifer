@@ -61,7 +61,7 @@ body{
 }
 
 .fileIsUploaded{
-    display: flex;
+    display: none;
     width: 600px;
     height: 56px;
     border-radius: 12px;

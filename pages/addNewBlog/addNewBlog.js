@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let dropArea = document.getElementById("drop-area");
     let inputFile = document.getElementById("file-input");
     let fileIsUploaded = document.getElementById("fileIsUploaded");
+    let imgName = document.getElementById('imgName')
     let file;
     
     inputFile.addEventListener("change", uploadImage);
@@ -27,8 +28,9 @@ document.addEventListener("DOMContentLoaded", function () {
     
     function updateImgUploadView() {
         dropArea.style.display = "none";
-        fileIsUploaded.style.display = "block";
-        fileIsUploaded.textContent = `${file.name}`;
+        fileIsUploaded.style.display = "flex";
+        imgName.text.textContent = `${file.name}`;
+        
         console.log("updateImgUploadView function called")
     }
 
@@ -63,14 +65,14 @@ publishBtn.addEventListener("click", function () {
 
     // Create data object
     let newData = {
-        id: Math.floor(Math.random() * 1000000) + 1;,
+        // id: Math.floor(Math.random() * 1000000) + 1,
         title: title,
         description: description,
         image: image,
         publish_date: publishDate,
         categories: [
             {
-                id: this.id;
+                id: this.id,
                 name: category,
                 text_color: "#ffffff",
                 background_color: "#000000"
