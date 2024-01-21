@@ -8,6 +8,7 @@
     <title>Add Blog</title>
 </head>
 <body>
+    <div id="overlayPage" class="overlayPage"></div>
     <div class="addBlogHeader">
         <img src="/Calcifer/images/LOGO-02 3.png" alt="redberry logo">
     </div>
@@ -26,8 +27,8 @@
 
         <div id="fileIsUploaded" class="fileIsUploaded">
             <img src="/Calcifer/images/gallery.png" alt="uploaded icon" class="uploadedIcon">
-            <p class="imgName">imgName</p>
-            <p class="removeX"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <p id="imgName" class="imgName">imgName</p>
+            <p id="removeX" class="removeX"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <path d="M7.75732 16.2426L16.2426 7.75736" stroke="#1A1A1F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M16.2426 16.2426L7.75732 7.75736" stroke="#1A1A1F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg></p>
@@ -70,25 +71,44 @@
             
             <div id="categoryContainer">
                 <label for="articleCategory">კატეგორია *</label>
-                <input type="text" class="articleCategory" id="articleCategory" name="articleCategory" list="categories" placeholder="აირჩიეთ კატეგორია" required>
-                <datalist id="categories">
-                    <option value="მარკეტი">
-                    <option value="აპლიკაცია">
-                    <option value="ხელოვნური ინტელექტი">
-                    <option value="UI/UX">
-                    <option value="კვლევა">
-                    <option value="Figma">
-                </datalist>
+                <div class="categoryBlock">
+                    <div id="articleCategory" class="articleCategory">აირჩიეთ კატეგორია</div>
+                    <img id="arrow-down" class="arrow-down" src="/Calcifer/images/arrow-down.jpg" alt="">
+                </div>
+                <div id="categoryList" class="categoryList">
+                    <div id="market">მარკეტი</div>
+                    <div id="app">აპლიკაცია</div>
+                    <div id="ai">ხელოვნური ინტელექტი</div>
+                    <div id="ui">UI/UX</div>
+                    <div id="research">კვლევა</div>
+                    <div id="figma">Figma</div>
+                </div>
             </div>
         </div>
 
-        <div class="emailAddress">
+        <div id="emailAddress" class="emailAddress">
             <label for="email">ელ-ფოსტა</label>
             <input placeholder="Example@redberry.ge" type="email" class="id" id="email" name="email">
             <div id="emailError" class="emailError">
                 <img src="/Calcifer/images/info-circle.svg" alt="error email">
                 <p class="emailErrorText">მეილი უნდა მთავრდებოდეს @redberry.ge-ით</p>
             </div>
+        </div>
+
+        <div id="addSuccess" class="addSuccess">
+            <p id="xRemove" class="xRemove"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M7.75732 16.2426L16.2426 7.75736" stroke="#1A1A1F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16.2426 16.2426L7.75732 7.75736" stroke="#1A1A1F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg></p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+                <path d="M32.0006 58.6667C46.6673 58.6667 58.6673 46.6667 58.6673 32C58.6673 17.3333 46.6673 5.33334 32.0006 5.33334C17.334 5.33334 5.33398 17.3333 5.33398 32C5.33398 46.6667 17.334 58.6667 32.0006 58.6667Z" fill="#14D81C"/>
+                <path d="M20.666 32L28.2127 39.5467L43.3327 24.4533" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <p class="successText">ჩანაწერი წარმატებით დაემატა</p>
+              <a href="/Calcifer/index.html" class="button-link">
+                <button class="toMain">მთავარ გვერდზე დაბრუნება</button>
+              </a>
+              
         </div>
         <button class="publish" id="publish">გამოქვეყნება</button>
     </div>

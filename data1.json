@@ -1,0 +1,19 @@
+[
+    {
+      "id": 1,
+      "title": "EOMM-ის მრჩეველთა საბჭოს ნინო ეგაძე შეუერთდა",
+      "description": "6 თვის შემდეგ ყველის ბრმა დეგუსტაციის დროც დადგა. მაქსიმალური სიზუსტისთვის, ეს პროცესი...",
+      "image": "./image/mob.png",
+      "publish_date": "2023-11-19",
+      "categories": [
+        {
+          "id": 1,
+          "name": "Category name 1",
+          "text_color": "#ffffff",
+          "background_color": "#000000"
+        }
+      ],
+      "author": "ლილე კვარაცხელია"
+    }
+  ]
+  

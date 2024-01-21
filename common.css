@@ -11,7 +11,7 @@ body {
 }
 
 .addBlogHeader {
-  width: 1440px;
+  width: 100%;
   height: 80px;
   border-bottom: 1px solid #e4e3eb;
   background: #fff;
